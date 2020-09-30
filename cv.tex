@@ -12,6 +12,7 @@
 \usepackage{fontspec}
 \usepackage{tabularx}
 \usepackage{ragged2e}
+\usepackage{hyperref}
 % if you are not using xelatex ou lualatex, replace by the encoding you are using
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
@@ -92,7 +93,7 @@
 
   \begin{center}
     \begin{tabular}{ c c c c }
-      \faGlobe\enspace miladibra.ir & \faEnvelopeO\enspace milaadibra@gmail.com & \faGithub\enspace miladibra10 & \faMobile\enspace +98-930-912-4818\\
+      \faGlobe\enspace \href{http://www.miladibra.ir}{miladibra.ir} & \faEnvelopeO\enspace milaadibra@gmail.com & \faGithub\enspace \href{https://github.com/miladibra10}{miladibra10} & \faMobile\enspace +98-930-912-4818\\
     \end{tabular}
   \end{center}
 %  Education
@@ -103,7 +104,7 @@
   \section{EXPERIENCE}\label{sec:experiences}
 
   {
-    \customcventry{Nov 2019 - Present}{Software Engineer}{Snapp}{Tehran, Iran}{}
+    \customcventry{Nov 2019 - Present}{Software Engineer}{\href{https://snapp.ir}{Snapp}}{Tehran, Iran}{}
     \\Snapp is the first and leading ride-hailing application in Iran.
     Our mission is to be the most preferred transportation solution in the country.
     Now, within 5 years, we are proud to welcome 30 million customers and 2 million drivers to our family. \\
@@ -116,7 +117,7 @@
       \end{itemize}
     }
 
-    \customcventry{Jun 2019 - Nov 2019}{Backend Developer}{Ostadkar}{Tehran, Iran}{}
+    \customcventry{Jun 2019 - Nov 2019}{Backend Developer}{\href{https://ostadkar.pro}{Ostadkar}}{Tehran, Iran}{}
     \\Ostadkar is the largest and fastest growing online platform for ordering home and business services.\\
     {
       \begin{itemize}
@@ -141,7 +142,7 @@
 %  Projects
   \section{PROJECTS}\label{sec:projects}
   {
-    \customcvproject{Highway}{Jan 2019 - Sept 2020}
+    \customcvproject{\href{https://github.com/Highway-Project/highway}{Highway}}{Jan 2019 - Sept 2020}
     \\ Highway is an high performance API Gateway implemented with Golang for bachelor thesis project\\
     {
       \begin{itemize}
@@ -149,7 +150,7 @@
         \item Scalable, Stateless and cloud ready.\\
       \end{itemize}
     }
-    \customcvproject{Dicer}{July 2019 - July 2020}
+    \customcvproject{\href{https://cafebazaar.ir/app/info.medrick.dicer}{Dicer}}{July 2019 - July 2020}
     \\Dicer is a turn-based and dice-based game like Yahtzee for the Iran's local store.\\
     {
       \begin{itemize}
