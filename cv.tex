@@ -1,0 +1,203 @@
+\documentclass[11pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome}
+\usepackage{fontspec}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+% if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\usepackage{multicol}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+
+% personal data
+\name{Milad}{Ebrahimi}
+% \title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+\address{Gisha, Tehran, Iran }{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+% \phone[mobile]{909-839-3097}                   % optional, remove / comment the line if not wanted
+% \phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+% \email{xpan1@swarthmore.edu}                               % optional, remove / comment the line if not wanted
+% \homepage{shawnpan.me}                         % optional, remove / comment the line if not wanted
+% \extrainfo{}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+
+\newcommand*{\customcventry}[7][.25em]{
+  \begin{tabular}{@{}l}
+  {\bfseries #4}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+  {\bfseries #5}
+  \end{tabular} \\
+  \begin{tabular}{@{}l}
+  {\itshape #3}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+  {\itshape #2}
+  \end{tabular}
+  \ifx&#7&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#7%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\newcommand*{\customcvproject}[4][.25em]{
+%   \vfill\noindent
+  \begin{tabular}{@{}l}
+  {\bfseries #2}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+  {\itshape #3}
+  \end{tabular}
+  \ifx&#4&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#4%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\setlength{\tabcolsep}{12pt}
+
+\begin{document}
+  \makecvtitle
+  \vspace*{-23mm}
+
+  \begin{center}
+    \begin{tabular}{ c c c c }
+      \faGlobe\enspace miladibra.ir & \faEnvelopeO\enspace milaadibra@gmail.com & \faGithub\enspace miladibra10 & \faMobile\enspace +98-930-912-4818\\
+    \end{tabular}
+  \end{center}
+%  Education
+  \section{EDUCATION}\label{sec:education}
+  {\customcventry{Graduation Date: September 2020}{BS in Computer Engineering GPA: 3.7/4.0}{Iran University of Science and Technology}{Tehran, Iran}{}{}}
+
+%  Experience
+  \section{EXPERIENCE}\label{sec:experiences}
+
+  {
+    \customcventry{Nov 2019 - Present}{Software Engineer}{Snapp}{Tehran, Iran}{}
+    \\Snapp is the first and leading ride-hailing application in Iran.
+    Our mission is to be the most preferred transportation solution in the country.
+    Now, within 5 years, we are proud to welcome 30 million customers and 2 million drivers to our family. \\
+    {
+      \begin{itemize}
+        \item Designed, implemented and maintained high quality, high available and scalable features, related to Map technology.
+        \item Designed, deployed and maintained monitoring stack with Promethues, Grafana, custom hooks, Bots and etc.
+        \item Deployed and maintained API Gateway (Kong) for Map team.
+        \item Worked with Go, Python, Lua, Redis, Tile38, PostgreSQL, Cassandra, RabbitMQ, Prometheus, Grafana, Kong, Docker, Kubernetes, Openshift\\
+      \end{itemize}
+    }
+
+    \customcventry{Jun 2019 - Nov 2019}{Backend Developer}{Ostadkar}{Tehran, Iran}{}
+    \\Ostadkar is the largest and fastest growing online platform for ordering home and business services.\\
+    {
+      \begin{itemize}
+        \item Designed, implemented and maintained features for Ostadkar platform.
+        \item Designed, deployed and maintained microservices on Ostadkar Platform
+        \item Worked with Python, Flask, Redis, PostgreSQL, RabbitMQ, Docker\\
+      \end{itemize}
+    }
+
+    \customcventry{Sep 2017 - Feb 2018}{Backend Developer}{ElmoGame}{Tehran, Iran}{}
+    \\ElmoGame is a company including 10 person from IUST university students located in Iran.
+    the main focus of our team is mobile games.\\
+    {
+      \begin{itemize}
+        \item Implemented Game backends for turn-based and realtime games.
+        \item Worked with Python, Flask, Redis, PostgreSQL, RabbitMQ, Docker\\
+      \end{itemize}
+    }
+  }
+
+  \cleardoublepage
+%  Projects
+  \section{PROJECTS}\label{sec:projects}
+  {
+    \customcvproject{Highway}{Jan 2019 - Sept 2020}
+    \\ Highway is an high performance API Gateway implemented with Golang for bachelor thesis project\\
+    {
+      \begin{itemize}
+        \item Implemented in Golang
+        \item Scalable, Stateless and cloud ready.\\
+      \end{itemize}
+    }
+    \customcvproject{Dicer}{July 2019 - July 2020}
+    \\Dicer is a turn-based and dice-based game like Yahtzee for the Iran's local store.\\
+    {
+      \begin{itemize}
+        \item Managed backend team.
+        \item Participated in designing and development of backend.
+        \item Worked with Python, Django, Redis, PostgreSQL, RabbitMQ, Docker.
+      \end{itemize}
+    }
+  }
+  %  Skills
+  \section{Skills}\label{sec:skills}
+  \begin{minipage}{\maincolumnwidth}%
+    \small{
+      \begin{itemize}
+        \item Golang
+        \item Distributed Systems.
+        \item Python
+        \item Docker
+        \item Redis
+        \item Tile38
+        \item RabbitMQ
+        \item PostgreSQL
+        \item Openshift and Kubernetes
+        \item Prometheus and Grafana
+        \item Git
+      \end{itemize}}%
+  \end{minipage}%
+
+  %  Languages
+  \section{LANGUAGES}\label{sec:languages}
+  \begin{minipage}{\maincolumnwidth}%
+    \small{
+      \begin{itemize}
+        \item English (Professional Working)
+        \item Persian (Native)
+        \item Turkish (Elementary)
+      \end{itemize}}%
+  \end{minipage}%
+
+%  Additional
+  \section{ADDITIONAL}\label{sec:additional}
+  \begin{minipage}{\maincolumnwidth}%
+    \small{
+      \begin{itemize}
+        \item TA of many courses in university like: Basic Programming, Advanced Programming, Data Structures, Software Engineering, Operating Systems, Databases and Artificial Intelligence
+      \end{itemize}}%
+  \end{minipage}%
+
+
+\end{document}
+
